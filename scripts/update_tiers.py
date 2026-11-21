@@ -40,11 +40,13 @@ def main():
         if not uuid:
             st, j = get("https://api.mojang.com/users/profiles/minecraft/" + name)
             if st != 200 or not j:
+                print(f"{name:16} Mojang    HTTP {st} - Name nicht gefunden")
                 continue
             uuid = p["uuid"] = j["id"]
         ext, complete = {}, True
         for src, base in SOURCES.items():
             st, j = get(base + uuid.replace("-", ""))
+            print(f"{name:16} {src:9} HTTP {st}  " + (json.dumps(j.get("rankings"))[:200] if isinstance(j, dict) and j.get("rankings") else ""))
             if st == 200 and isinstance(j, dict):
                 m = modes_of(j)
                 if m:
