@@ -3,9 +3,9 @@ Laeuft automatisch per GitHub Actions (siehe .github/workflows/tiers.yml)."""
 import json, time, urllib.request, urllib.error
 
 SOURCES = {
-    "mctiers": "https://mctiers.com/api/v2/profile/",
+    "mctiers": "https://mctiers.net/api/v2/profile/",
     "pvptiers": "https://pvptiers.com/api/profile/",
-    "subtiers": "https://subtiers.net/api/profile/",
+    "subtiers": "https://subtiers.net/api/v2/profile/",
 }
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (PrimeTiers-Bot; +https://primetiers.netlify.app)", "Accept": "application/json"}
