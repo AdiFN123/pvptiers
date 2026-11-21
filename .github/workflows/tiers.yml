@@ -1,0 +1,23 @@
+name: Tiers von MCTiers holen
+on:
+  schedule:
+    - cron: "*/30 * * * *"
+  workflow_dispatch:
+  push:
+    paths:
+      - tiers.json
+permissions:
+  contents: write
+concurrency: tiers-update
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/update_tiers.py
+      - run: |
+          if git diff --quiet; then echo "Keine Aenderungen"; exit 0; fi
+          git config user.name "Prime Tiers Bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Tiers von MCTiers/PvPTiers/SubTiers aktualisiert"
+          git pull --rebase && git push
