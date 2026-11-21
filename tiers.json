@@ -1,6 +1,22 @@
 {
   "players": {
-    "maneszn": { "tier": "HT4", "mode": "vanilla" },
-    "Adi_Gaming1": { "tier": "LT4", "mode": "vanilla", "rank": "admin", "name": "FIRE", "cape": "cape_admin", "hat": "hat_ht1", "glasses": "glasses_admin", "aura": "aura_feuer", "pet": "pet_admin", "wings": "wings_admin" }
+    "maneszn": {
+      "tier": "HT4",
+      "mode": "vanilla",
+      "uuid": "af302e8742d24014a8f7287656ec032d"
+    },
+    "Adi_Gaming1": {
+      "tier": "LT4",
+      "mode": "vanilla",
+      "rank": "admin",
+      "name": "FIRE",
+      "cape": "cape_admin",
+      "hat": "hat_ht1",
+      "glasses": "glasses_admin",
+      "aura": "aura_feuer",
+      "pet": "pet_admin",
+      "wings": "wings_admin",
+      "uuid": "f0531c0606c843379df1a4c757725c9c"
+    }
   }
 }
