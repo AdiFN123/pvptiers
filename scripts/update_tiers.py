@@ -23,6 +23,24 @@ def get(url):
         print(f"   Fehler bei {url}: {type(e).__name__}: {e} | Antwort: {body[:150]!r}")
         return 0, None
 
+def tag_of(tier, pos):
+    return ("HT" if int(pos) == 0 else "LT") + str(int(tier))
+
+def details_of(profile):
+    """Hoechst-Tier und Datum je Spielmodus."""
+    peaks, since = {}, {}
+    for mode, r in (profile.get("rankings") or {}).items():
+        if not isinstance(r, dict):
+            continue
+        if r.get("peak_tier") is not None and r.get("peak_pos") is not None:
+            peaks[mode] = tag_of(r["peak_tier"], r["peak_pos"])
+        if r.get("attained"):
+            try:
+                since[mode] = int(r["attained"])
+            except (TypeError, ValueError):
+                pass
+    return peaks, since
+
 def modes_of(profile):
     out = {}
     for mode, r in (profile.get("rankings") or {}).items():
@@ -55,7 +73,9 @@ def main():
             if st == 200 and isinstance(j, dict):
                 m = modes_of(j)
                 if m:
-                    ext[src] = {"modes": m, "points": j.get("points"), "region": j.get("region")}
+                    peaks, since = details_of(j)
+                    ext[src] = {"modes": m, "peaks": peaks, "since": since, "points": j.get("points"),
+                                "region": j.get("region"), "overall": j.get("overall")}
             elif st != 404:
                 complete = False          # Seite nicht erreichbar -> alte Daten behalten
                 if src in (p.get("external") or {}):
