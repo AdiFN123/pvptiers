@@ -1,0 +1,8 @@
+{
+  "players": {
+    "Adrian": { "tier": "HT1", "cape": "cape_ht1", "hat": "hat_ht1", "aura": "aura_ht1" },
+    "Spieler2": { "tier": "LT3", "cape": "cape_lt3", "hat": "hat_ht4", "aura": "aura_lt3" },
+    "Spieler3": { "tier": "HT5", "cape": "cape_ht5" },
+    "Player123": { "tier": "HT1" }
+  }
+}
