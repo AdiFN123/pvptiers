@@ -3,7 +3,18 @@
     "maneszn": {
       "tier": "HT4",
       "mode": "vanilla",
-      "uuid": "af302e8742d24014a8f7287656ec032d"
+      "uuid": "af302e8742d24014a8f7287656ec032d",
+      "external": {
+        "mctiers": {
+          "modes": {
+            "vanilla": "HT4",
+            "mace": "HT5",
+            "sword": "HT5"
+          },
+          "points": 8,
+          "region": "EU"
+        }
+      }
     },
     "Adi_Gaming1": {
       "tier": "LT4",
