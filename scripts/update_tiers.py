@@ -8,14 +8,19 @@ SOURCES = {
     "subtiers": "https://subtiers.net/api/profile/",
 }
 
+HEADERS = {"User-Agent": "Mozilla/5.0 (PrimeTiers-Bot; +https://primetiers.netlify.app)", "Accept": "application/json"}
+
 def get(url):
-    req = urllib.request.Request(url, headers={"User-Agent": "PrimeTiers-Bot"})
+    req = urllib.request.Request(url, headers=HEADERS)
+    body = ""
     try:
-        with urllib.request.urlopen(req, timeout=15) as r:
-            return r.status, json.loads(r.read().decode("utf-8"))
+        with urllib.request.urlopen(req, timeout=20) as r:
+            body = r.read().decode("utf-8", "replace")
+            return r.status, json.loads(body)
     except urllib.error.HTTPError as e:
         return e.code, None
-    except Exception:
+    except Exception as e:
+        print(f"   Fehler bei {url}: {type(e).__name__}: {e} | Antwort: {body[:150]!r}")
         return 0, None
 
 def modes_of(profile):
