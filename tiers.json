@@ -1,5 +1,6 @@
 {
   "players": {
-    "Adi_Gaming1": { "tier": "HT1", "rank": "admin", "name": "FIRE", "cape": "cape_admin", "hat": "hat_ht1", "glasses": "glasses_admin", "aura": "aura_feuer", "pet": "pet_admin", "wings": "wings_admin" }
+    "maneszn": { "tier": "HT4", "mode": "vanilla" },
+    "Adi_Gaming1": { "tier": "LT4", "mode": "vanilla", "rank": "admin", "name": "FIRE", "cape": "cape_admin", "hat": "hat_ht1", "glasses": "glasses_admin", "aura": "aura_feuer", "pet": "pet_admin", "wings": "wings_admin" }
   }
 }
