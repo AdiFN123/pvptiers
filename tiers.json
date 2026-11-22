@@ -25,10 +25,10 @@
           "region": "EU",
           "overall": 31032
         }
-      }
+      },
+      "rank": "mod"
     },
     "Adi_Gaming1": {
-      "tier": "LT4",
       "mode": "vanilla",
       "rank": "admin",
       "name": "FIRE",
