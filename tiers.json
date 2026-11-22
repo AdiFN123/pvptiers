@@ -7,12 +7,23 @@
       "external": {
         "mctiers": {
           "modes": {
-            "mace": "HT5",
             "sword": "HT5",
-            "vanilla": "HT4"
+            "vanilla": "HT4",
+            "mace": "HT5"
+          },
+          "peaks": {
+            "sword": "HT5",
+            "vanilla": "HT4",
+            "mace": "HT5"
+          },
+          "since": {
+            "sword": 1794957406,
+            "vanilla": 1794951085,
+            "mace": 1795260087
           },
           "points": 8,
-          "region": "EU"
+          "region": "EU",
+          "overall": 31005
         }
       }
     },
