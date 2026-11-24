@@ -23,7 +23,7 @@
           },
           "points": 8,
           "region": "EU",
-          "overall": 31117
+          "overall": 31119
         }
       },
       "rank": "admin",
@@ -48,7 +48,8 @@
     },
     "ShinyDamogilus": {
       "name": "FIRE",
-      "motion": "HEARTBEAT"
+      "motion": "HEARTBEAT",
+      "uuid": "a74018996df44eabbd5a4a34f103dda9"
     }
   }
 }
