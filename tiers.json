@@ -7,23 +7,23 @@
       "external": {
         "mctiers": {
           "modes": {
-            "vanilla": "HT4",
             "mace": "HT5",
+            "vanilla": "HT4",
             "sword": "HT5"
           },
           "peaks": {
-            "vanilla": "HT4",
             "mace": "HT5",
+            "vanilla": "HT4",
             "sword": "HT5"
           },
           "since": {
-            "vanilla": 1794951085,
             "mace": 1795260087,
+            "vanilla": 1794951085,
             "sword": 1794957406
           },
           "points": 8,
           "region": "EU",
-          "overall": 31208
+          "overall": 31210
         }
       },
       "rank": "admin",
